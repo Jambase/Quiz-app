@@ -1,14 +1,225 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+     <h1 text-center>THE QUIZZ APP</h1>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="card-background-page">
+    <ion-slides pager>
+
+        
+        <ion-slide text-center>
+            <ion-card>
+                <img src="../assets/imgs/music.jpg"/>
+              <div class="card-title"> Music</div>
+           
+             <div text-center class="card-subtitle">
+              <ion-list>
+                <ion-item>
+                  <ion-label>which south african artist won the 2018 BET award?</ion-label>
+                  <ion-select [(ngModel)]="BET" cancelText="Nah" okText="Okay!">
+                    <ion-option value="cass">Casper Nyovest</ion-option>
+                    <ion-option value="coffe">Black Coffee</ion-option>
+                    <ion-option value="sjava">Sjava</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+
+                <ion-list>
+                  <ion-item>
+                    <ion-label>what is the name of the album that drake just resently realsed?</ion-label>
+                    <ion-select [(ngModel)]="album" cancelText="Nah" okText="Okay!">
+                      <ion-option value="Scopion">Scopion</ion-option>
+                      <ion-option value="take">Take |Care</ion-option>
+                      <ion-option value="yol">YOLO</ion-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+
+                  <ion-list>
+                    <ion-item>
+                      <ion-label>Did Casper Nyovest fill up Moses mabhida?</ion-label>
+                      <ion-select [(ngModel)]="fill" cancelText="Nah" okText="Okay!">
+                        <ion-option value="fill">Yes</ion-option>
+                        <ion-option value="Not">No</ion-option>
+                      </ion-select>
+                    </ion-item>
+                  </ion-list>
+
+                    <ion-list>
+                      <ion-item>
+                        <ion-label>Is 2pac dead or alive?</ion-label>
+                        <ion-select [(ngModel)]="alive" cancelText="Nah" okText="Okay!">
+                          <ion-option value="dead">Dead</ion-option>
+                          <ion-option value="alive">Alive</ion-option>
+                        </ion-select>
+                      </ion-item>
+                    </ion-list>
+
+                    <ion-list>
+                      <ion-item>
+                        <ion-label>whose the founder and owner of after math?</ion-label>
+                        <ion-select [(ngModel)]="math" cancelText="Nah" okText="Okay!">
+                          <ion-option value="pac">2pac</ion-option>
+                          <ion-option value="snoop">Snoop Dog</ion-option>
+                          <ion-option value="Dr">Andre young</ion-option>
+                        </ion-select>
+                      </ion-item>
+                    </ion-list>
+
+                    <button ion-button full outline color="danger" (click)="musicResults()" >Resualts</button>
+
+                   
+                  
+                  </div>
+                  <p>{{total}}</p>
+                </ion-card>
+        </ion-slide>
+      
+        <ion-slide>
+          <ion-card class="slide2">
+              <img src="../assets/imgs/pop.jpg"/>
+          <div class="card-title"> Movies</div>
+          <ion-list>
+            <ion-item>
+                <ion-label>Which year was lion king released?</ion-label>
+                <ion-select [(ngModel)]="king" cancelText="Nah" okText="Okay!">
+                  <ion-option value="one">1984</ion-option>
+                  <ion-option value="two">1994</ion-option>
+                  <ion-option value="three">2004</ion-option>
+                  <ion-option value="fourr">2014</ion-option>
+                </ion-select>
+              </ion-item>
+          </ion-list>
+
+          <ion-list>
+           <ion-item>
+              <ion-label>Which native african langauge is used in blackpanthere?</ion-label>
+              <ion-select [(ngModel)]="langauge" cancelText="Nah" okText="Okay!">
+                <ion-option value="Pedi">Pedi</ion-option>
+                <ion-option value="tsonga">Tsonga</ion-option>
+                <ion-option value="xhosa">Xhosa</ion-option>
+                <ion-option value="zulu">Zulu</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        
+        <ion-list>
+          <ion-item>
+            <ion-label>Which avengers sold the most ?</ion-label>
+            <ion-select [(ngModel)]="avengers" cancelText="Nah" okText="Okay!">
+              <ion-option value="war">Infinity war</ion-option>
+              <ion-option value="age">Age of ultron</ion-option>
+              <ion-option value="civil">Civil war</ion-option> 
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>how many seasons does game of thrones has by far?</ion-label>
+          <ion-select [(ngModel)]="game" cancelText="Nah" okText="Okay!">
+            <ion-option value="first">1</ion-option>
+            <ion-option value="second">7</ion-option>
+            <ion-option value="third">8</ion-option> 
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>who won an award of leading role on 2017?</ion-label>
+          <ion-select [(ngModel)]="role" cancelText="Nah" okText="Okay!">
+            <ion-option value="Will">Will smith</ion-option>
+            <ion-option value="Morgan">Morgan Freeman</ion-option>
+            <ion-option value="danzel">Danzel Washington</ion-option> 
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+
+        <button ion-button full outline color="danger" (click)="movieResults()" >Resualts</button>
+        <p>{{total}}</p>
+      </ion-card>
+        
+
+      </ion-slide>
+        
+      
+        <ion-slide>
+          <ion-card>
+              <img src="../assets/imgs/math.jpg"/>
+              
+            
+          <ion-list>
+            <ion-item>
+              <ion-label>what is the value of X when Y=X-2?</ion-label>
+              <ion-select [(ngModel)]="value" multiple="true" cancelText="Nah" okText="Okay!">
+                <ion-option value="twoy">X=2Y</ion-option>
+                <ion-option value="axa">X=Y+2</ion-option>
+                <ion-option value="two$y">X=Y/2</ion-option> 
+              </ion-select>
+            </ion-item>
+          </ion-list>
+          
+            
+          <ion-list>
+            <ion-item>
+              <ion-label>find the value of X 2X+1=7?</ion-label>
+              <ion-select [(ngModel)]="find" multiple="true" cancelText="Nah" okText="Okay!">
+                <ion-option value="eight">X=8</ion-option>
+                <ion-option value="six">X=6</ion-option>
+                <ion-option value="three">x=3</ion-option> 
+                <ion-option value="four">x=4</ion-option> 
+              </ion-select>
+            </ion-item>
+          </ion-list>
+
+            <ion-list>
+              <ion-item>
+                <ion-label>complete the sequence:8,6,12,14,12,24, ?</ion-label>
+                <ion-select [(ngModel)]="complete" multiple="true" cancelText="Nah" okText="Okay!">
+                  <ion-option value="twethytwo">22</ion-option>
+                  <ion-option value="twelve">12</ion-option>
+                  <ion-option value="eighteen">18</ion-option> 
+                  <ion-option value="fourtheen">14</ion-option> 
+                </ion-select>
+              </ion-item>
+            </ion-list>
+
+            <ion-list>
+                <ion-item>
+                  <ion-label>Give the correct answer 2*0+3-1?</ion-label>
+                  <ion-select [(ngModel)]="give" multiple="true" cancelText="Nah" okText="Okay!">
+                    <ion-option value="zero">0</ion-option>
+                    <ion-option value="for">4</ion-option>
+                    <ion-option value="tw">2</ion-option> 
+                    <ion-option value="thre">3</ion-option> 
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+
+              <ion-list>
+                <ion-item>
+                  <ion-label>find the value of (a) 4b=2a+c?</ion-label>
+                  <ion-select [(ngModel)]="of" multiple="true" cancelText="Nah" okText="Okay!">
+                    <ion-option value="wrong">a=c+2b</ion-option>
+                    <ion-option value="midle">2a=-c/2+2b</ion-option>
+                    <ion-option value="corr">a=-c/2+2b</ion-option> 
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+
+              <button ion-button full outline color="danger" (click)="mathemathicsResults()" >Resaults</button>
+              <p>{{total}}</p>
+            
+            </ion-card>
+            </ion-slide>
+          
+      </ion-slides>
+   
+  
+     
 </ion-content>

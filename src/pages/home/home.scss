@@ -1,3 +1,47 @@
 page-home {
+.slide1{
+    background-image: url("../assets/imgs/music.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.slide2{
+    background-image: url("../assets/imgs/pop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.slide3{
+    background-image: url("../assets/imgs/math.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.card-background-page {
+
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+  
+    .card-title {
+      position: absolute;
+      top: 10%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color:red;
+    }
+  
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 20%;
+      width: 100%;
+      color:black;
+    }
+  
+  }
 
 }
